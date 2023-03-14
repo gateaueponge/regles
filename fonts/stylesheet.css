@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Facade Sud';
+    src: local('Facade Sud'), local('Facade-Sud'),
+        url('Facade-Sud.woff2') format('woff2'),
+        url('Facade-Sud.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Facade Ouest';
+    src: local('Facade Ouest'), local('Facade-Ouest'),
+        url('Facade-Ouest.woff2') format('woff2'),
+        url('Facade-Ouest.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Facade Est';
+    src: local('Facade Est'), local('Facade-Est'),
+        url('Facade-Est.woff2') format('woff2'),
+        url('Facade-Est.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Facade Sud-Ouest';
+    src: local('Facade Sud-Ouest'), local('Facade-Sud-Ouest'),
+        url('Facade-Sud-Ouest.woff2') format('woff2'),
+        url('Facade-Sud-Ouest.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

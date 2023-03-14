@@ -1,0 +1,315 @@
+/*fonts and variables*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'mainz';
+  src: local('Mainz'), local('Mainz'),,
+      url('fonts/Mainz.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Facade Sud';
+  src: local('Facade Sud'), local('Facade-Sud'),
+      url('Facade-Sud.woff2') format('woff2'),
+      url('Facade-Sud.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Facade Ouest';
+  src: local('Facade Ouest'), local('Facade-Ouest'),
+      url('fonts/Facade-Ouest.woff2') format('woff2'),
+      url('fonts/Facade-Ouest.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Facade Est';
+  src: local('Facade Est'), local('Facade-Est'),
+      url('fonts/Facade-Est.woff2') format('woff2'),
+      url('fonts/Facade-Est.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Facade Sud-Ouest';
+  src: local('Facade Sud-Ouest'), local('Facade-Sud-Ouest'),
+      url('fonts/Facade-Sud-Ouest.woff2') format('woff2'),
+      url('fonts/Facade-Sud-Ouest.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*infos de page et animation*/
+
+@page{
+    margin-bottom: 10mm;
+    margin-top: 30mm;
+    size:20cm 10cm;
+    animation: animationpage 10s linear infinite;
+    marks: crop;
+    bleed: 4mm;
+    margin-left: 40mm;
+    margin-right: 50mm; 
+    
+}
+
+@page:first {
+    margin:5mm;
+
+  }
+  
+  @page:nth(36) {
+    margin-top:25mm;
+
+  }
+
+
+@keyframes animationpage {
+    0% {
+
+       
+    
+    }
+    
+
+    50% {
+
+       
+    }
+
+    100% {
+
+        background-color: white;
+      
+    }
+}
+/* sauts de page*/
+
+.breakbefore {
+    page-break-before : always;
+    }
+    
+    .breakafter {
+    page-break-after : always;
+    }
+
+
+/*couverture*/
+
+#couverture { 
+  transform: rotate(90deg);
+  width:7.5cm;
+  height: 20cm;
+  translate :6cm -4.5cm;
+  overflow: visible;
+  position: absolute ;
+  padding: 0;
+  margin: 0;
+  
+}
+
+
+#couverture4 { 
+  transform: rotate(90deg);
+  width:7.5cm;
+  height: 20cm;
+  translate :1.5cm -6.5cm;
+  overflow: visible;
+  position: absolute ;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#fauxtitre { 
+  transform: rotate(90deg);
+  translate :13cm 0cm;
+  overflow: visible;
+  position: absolute ;
+  padding: 0;
+  margin: 0;
+  
+}
+
+ h1 {
+  font-size: 15pt;
+  margin-bottom: 0px;
+  font-family: 'Facade Sud';
+    font-weight: 100;
+    font-style: normal;
+    margin-top: 1cm;
+    font-style: normal;
+
+  
+}
+#couverture p {
+ font-size: 10.3pt;
+ margin-top: 0;
+ margin-bottom: 0 ;
+ font-family: 'Space Grotesk', sans-serif;
+ font-weight:400;
+ line-height: 115%;
+
+}
+
+#couverture4 p {
+  font-size: 10.3pt;
+  margin-top: 0;
+  margin-bottom: 0 ;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight:400;
+  line-height: 115%;
+ 
+ }
+
+b {
+  font-weight: 600;
+}
+h3 {
+  font-size: 11pt;
+  margin-top: 0.25em;
+  font-family: 'facade sud-ouest';
+  font-style: normal;
+ }
+
+
+ /*contenu citation*/
+ 
+ .auteur {
+  font-family: 'facade sud-ouest';
+  line-height: 1.5em;
+
+
+ }
+
+
+ .crouwel {
+  /* transform: rotate(180deg);
+ border: solid red 1px*/
+
+ }
+
+ /*doivent être la meme chose*/
+
+.crouwel p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10pt;
+  line-height: 115%;
+  margin-top: 0;
+}
+
+.vantoorn p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10pt;
+  line-height: 115%;
+  margin-top: 0;
+}
+
+ /*notes de bas de page*/
+
+
+
+
+.footnote {
+    float: footnote;
+    font-family: 'facade sud-ouest';
+    overflow: visible;
+  }
+
+  /* regler les couleurs des notes en fonction du papier*/
+
+  .notecrouwel {
+   /* transform: rotate(180deg);*/
+   overflow: visible;
+   
+   }
+
+   .notevantoorn {
+    transform: rotate(180deg);
+    overflow: visible;
+   
+   }
+  
+  
+  /* define the position of the footnote on the page (only bottom is possible for now) */
+  
+  @page {
+    @footnote {
+      float: bottom;
+      
+    }
+  }
+
+  /* il y a 22 notes en tout
+  le call est dans le texte courant, le marker là où il y a les notes
+  chaque counter est une lettre bas-de-casse, de fait la typo utilisera dans l'ordre les dingbats a à z*/
+
+  ::footnote-call {
+    content: counter(footnote, lower-alpha) ;
+    line-height: 0;
+    text-transform: capitalize;
+    font-family: 'mainz';
+  }
+::footnote-marker {
+    content: counter(footnote, lower-alpha);
+    font-weight: 700;
+    line-height: 0;
+    text-transform: capitalize;
+    font-family: 'mainz';
+  }
+
+ 
+  /* iconographie*/
+
+  @page:nth(17) {
+     margin:0;
+        }
+
+        
+  @page:nth(18) {
+    margin:0;
+       }
+
+       
+  @page:nth(19) {
+    margin:0;
+       }
+
+       
+  @page:nth(20) {
+    margin:0;
+       }
+.icono {
+  margin: 0;
+  width: 20cm;
+  height: 10cm;
+  overflow: visible;
+  
+  }
+
+.iconocrouwel {
+  transform: rotate(180deg);
+}
+
+.iconovantoorn {
+  padding-top: 2.5cm;
+  
+}
+
+ img {
+    margin-right: 5mm;
+    height: 7.5cm;
+  }
