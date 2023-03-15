@@ -56,7 +56,7 @@
 
 @page{
     margin-bottom: 10mm;
-    margin-top: 30mm;
+    margin-top: 32mm;
     size:20cm 10cm;
     animation: animationpage 10s linear infinite;
     marks: crop;
@@ -126,7 +126,7 @@
   transform: rotate(90deg);
   width:7.5cm;
   height: 20cm;
-  translate :1.5cm -6.5cm;
+  translate :2.5cm -6.5cm;
   overflow: visible;
   position: absolute ;
   padding: 0;
@@ -155,9 +155,15 @@
 
   
 }
+
+#couverture h1 {
+line-height: 115%;
+
+
+}
 #couverture p {
  font-size: 10.3pt;
- margin-top: 0;
+margin-top: 3mm;
  margin-bottom: 0 ;
  font-family: 'Space Grotesk', sans-serif;
  font-weight:400;
@@ -166,12 +172,12 @@
 }
 
 #couverture4 p {
-  font-size: 10.3pt;
-  margin-top: 0;
-  margin-bottom: 0 ;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight:400;
-  line-height: 115%;
+ font-size: 10.3pt;
+margin-top: 3mm;
+ margin-bottom: 0 ;
+ font-family: 'Space Grotesk', sans-serif;
+ font-weight:400;
+ line-height: 115%;
  
  }
 
